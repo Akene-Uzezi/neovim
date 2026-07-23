@@ -7,7 +7,7 @@ A customized Neovim configuration built on [LazyVim](https://github.com/LazyVim/
 This configuration is built with **Lua** and includes:
 
 - **Plugin Management**: [Lazy.nvim](https://github.com/folke/lazy.nvim) for fast, modern plugin management with pinned versions via `lazy-lock.json`
-- **Colorscheme**: [Graphite](https://github.com/binarylinuxx/graphite-nvim) as the primary theme
+- **Colorscheme**: Tokyo Night as the default theme [tokyonight-nvim](https://github.com/folke/tokyonight.nvim), graphitenvim also available
 - **UI Enhancements**: Snacks dashboard with custom header, NeoTree file explorer, statusline via Lualine, and Noice for improved command/message UI
 - **Fuzzy Finder**: Telescope for file finding and searching, with hidden files shown and `.gitignore` disabled by default
 - **Completion**: blink.cmp for fast, modern completion
@@ -49,7 +49,6 @@ This configuration is built with **Lua** and includes:
     │   ├── lazy.lua          # Lazy.nvim bootstrap and setup
     │   └── options.lua       # Neovim options
     └── plugins/
-        ├── colorscheme.lua   # Graphite theme and colorscheme config
         ├── dashboard.lua     # Snacks.nvim dashboard with custom ASCII header
         ├── neotree.lua       # NeoTree file explorer (shows dotfiles and gitignored items)
         ├── telescope.lua     # Telescope fuzzy finder (shows hidden files, ignores .gitignore)
@@ -60,7 +59,7 @@ This configuration is built with **Lua** and includes:
 
 ### Prerequisites
 
-- Neovim (v0.8 or later)
+- Neovim (v0.9 or later)
 - Git
 - A terminal that supports true color
 
@@ -97,10 +96,10 @@ nvim
 - **NeoTree**: File explorer showing hidden and gitignored items for full project visibility
 - **Telescope**: Powerful fuzzy finder configured to show hidden files and bypass `.gitignore`
 - **Mason**: Manages LSP servers, DAP adapters, formatters, and linters
-- **LazyVim Extras**: Language-specific plugins for Git, Docker, Go, Python, Rust, SQL, and TypeScript/JavaScript
+- **LazyVim Extras**: Language-specific plugins for Git, Docker, Go, Python, Rust, SQL, and TypeScript
 - **Conform**: Automatic formatting on save via Conform.nvim
 - **nvim-lint**: Automatic linting via nvim-lint
-- **Graphite**: Modern, high-contrast colorscheme with priority 1000
+- **Tokyo Night**: Modern, high-contrast colorscheme
 
 ## 🛠️ Customization
 
@@ -131,11 +130,13 @@ Add keybindings to `lua/config/keymaps.lua` following the example patterns.
 
 ### Changing Colorscheme
 
-Edit `lua/plugins/colorscheme.lua` to switch to a different theme.
+Edit `lua/plugins/dashboard.lua` or create a new plugin file to switch to a different theme.
 
 ### Enabling LazyVim Extras
 
 Edit `lazyvim.json` to enable additional language extras from [LazyVim Extras](https://www.lazyvim.org/extras).
+
+Docker support is currently enabled directly in `lua/config/lazy.lua`.
 
 ### Configuring Mason Tools
 
