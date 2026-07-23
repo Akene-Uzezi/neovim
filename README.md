@@ -5,23 +5,30 @@ A customized [LazyVim](https://github.com/LazyVim/LazyVim) (v8) configuration fo
 ## Features
 
 - **Plugin Management**: Lazy.nvim with pinned versions via `lazy-lock.json`
-- **UI**: Snacks dashboard with custom ASCII header, NeoTree, Lualine, Which-Key
+- **UI**: Snacks dashboard with custom ASCII header, NeoTree, Lualine, Which-Key, Tokyonight theme
 - **Fuzzy Finder**: Telescope with hidden files and `.gitignore` bypass
 - **Completion**: blink.cmp
+- **Navigation**: flash.nvim, flash-treesitter
+- **Git**: gitsigns.nvim (inline diff, git blame), grug-far.nvim (find & replace)
 - **Language Extras** (via LazyVim Extras):
-  - Git, Go, Python, Rust, SQL, TypeScript/JavaScript
-- **Linting & Formatting**: nvim-lint, Conform.nvim, StyLua, shfmt
-- **Navigation**: Telescope, flash.nvim
+  - Docker, Git, Go, Python, Rust, SQL, TypeScript/JavaScript
+- **LSP**: mason.nvim + mason-lspconfig, rustaceanvim, venv-selector
+- **Linting & Formatting**: nvim-lint, Conform.nvim, StyLua, shfmt, shellcheck
 - **Session Management**: persistence.nvim
-- **Diagnostics**: trouble.nvim
+- **Diagnostics**: trouble.nvim, todo-comments.nvim
+- **Editor**: nvim-treesitter, mini.ai, mini.pairs, noice.nvim
+- **Database**: vim-dadbod, vim-dadbod-ui, vim-dadbod-completion
+- **Misc**: ts-comments.nvim, crates.nvim, lazydev.nvim, mini.icons, friendly-snippets
 
 ## Keybindings
 
 | Mode | Key        | Action                              |
 |------|------------|-------------------------------------|
 | Insert | `jk`     | Exit insert mode                    |
-| Normal | `<C-/>`   | Toggle line comment                 |
+| Normal | `<C-,>`   | Toggle line comment                 |
 | Normal | `<C-_>`   | Toggle line comment                 |
+| Visual | `<C-,>`   | Toggle line comment                 |
+| Visual | `<C-_>`   | Toggle line comment                 |
 | Normal/Visual | `<A-Down>` | Move selection/line down       |
 | Normal/Visual | `<A-Up>`   | Move selection/line up         |
 
@@ -37,8 +44,7 @@ A customized [LazyVim](https://github.com/LazyVim/LazyVim) (v8) configuration fo
 │   ├── config/
 │   │   ├── autocmds.lua      # Custom autocmds
 │   │   ├── keymaps.lua       # Custom key mappings
-│   │   ├── lazy.lua          # Lazy.nvim bootstrap
-│   │   └── options.lua       # Neovim options
+│   │   └── lazy.lua          # Lazy.nvim bootstrap
 │   └── plugins/
 │       ├── dashboard.lua     # Snacks.nvim dashboard
 │       ├── neotree.lua       # NeoTree (show dotfiles/gitignored)
