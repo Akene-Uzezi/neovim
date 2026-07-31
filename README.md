@@ -11,8 +11,8 @@ A customized [LazyVim](https://github.com/LazyVim/LazyVim) (v8) configuration fo
 - **Navigation**: flash.nvim, flash-treesitter
 - **Git**: gitsigns.nvim (inline diff, git blame), grug-far.nvim (find & replace)
 - **Language Extras** (via LazyVim Extras):
-  - Docker, Git, Go, Python, Rust, SQL, TypeScript/JavaScript
-- **LSP**: mason.nvim + mason-lspconfig, rustaceanvim, venv-selector
+  - Git, Go, Python, Rust, SQL, TypeScript/JavaScript
+- **LSP**: mason.nvim + mason-lspconfig, rustaceanvim, venv-selector, protols (Protobuf)
 - **Linting & Formatting**: nvim-lint, Conform.nvim, StyLua, shfmt, shellcheck
 - **Session Management**: persistence.nvim
 - **Diagnostics**: trouble.nvim, todo-comments.nvim
@@ -44,10 +44,12 @@ A customized [LazyVim](https://github.com/LazyVim/LazyVim) (v8) configuration fo
 │   ├── config/
 │   │   ├── autocmds.lua      # Custom autocmds
 │   │   ├── keymaps.lua       # Custom key mappings
-│   │   └── lazy.lua          # Lazy.nvim bootstrap
+│   │   ├── lazy.lua          # Lazy.nvim bootstrap
+│   │   └── options.lua       # Neovim options
 │   └── plugins/
 │       ├── dashboard.lua     # Snacks.nvim dashboard
 │       ├── neotree.lua       # NeoTree (show dotfiles/gitignored)
+│       ├── protobuf.lua      # Protobuf LSP, treesitter, formatting
 │       ├── telescope.lua     # Telescope (show hidden, no .gitignore)
 │       └── example.lua       # Example (disabled by default)
 ```
