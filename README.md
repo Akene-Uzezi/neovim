@@ -5,7 +5,7 @@ A customized [LazyVim](https://github.com/LazyVim/LazyVim) (v8) configuration fo
 ## Features
 
 - **Plugin Management**: Lazy.nvim with pinned versions via `lazy-lock.json`
-- **UI**: Snacks dashboard with custom ASCII header, NeoTree, Lualine, Which-Key, Tokyonight theme
+- **UI**: Snacks dashboard with custom ASCII header, NeoTree, Lualine, Which-Key, Rose Pine theme with black background
 - **Fuzzy Finder**: Telescope with hidden files and `.gitignore` bypass
 - **Completion**: blink.cmp
 - **Navigation**: flash.nvim, flash-treesitter
@@ -47,9 +47,10 @@ A customized [LazyVim](https://github.com/LazyVim/LazyVim) (v8) configuration fo
 │   │   ├── lazy.lua          # Lazy.nvim bootstrap
 │   │   └── options.lua       # Neovim options
 │   └── plugins/
+│       ├── black.lua         # Rose Pine colorscheme + black background
 │       ├── dashboard.lua     # Snacks.nvim dashboard
 │       ├── neotree.lua       # NeoTree (show dotfiles/gitignored)
-│       ├── protobuf.lua      # Protobuf LSP, treesitter, formatting
+│       ├── protobuf.lua      # Protobuf LSP, treesitter, formatting (buf)
 │       ├── telescope.lua     # Telescope (show hidden, no .gitignore)
 │       └── example.lua       # Example (disabled by default)
 ```
