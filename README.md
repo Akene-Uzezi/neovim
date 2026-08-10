@@ -11,7 +11,7 @@ A customized [LazyVim](https://github.com/LazyVim/LazyVim) (v8) configuration fo
 - **Navigation**: flash.nvim, flash-treesitter
 - **Git**: gitsigns.nvim (inline diff, git blame), grug-far.nvim (find & replace)
 - **Language Extras** (via LazyVim Extras):
-  - Git, Go, Python, Rust, SQL, TypeScript/JavaScript
+  - C/C++ (clangd), Git, Go, Python, Rust, SQL, TypeScript/JavaScript
 - **LSP**: mason.nvim + mason-lspconfig, rustaceanvim, venv-selector, protols (Protobuf)
 - **Linting & Formatting**: nvim-lint, Conform.nvim, StyLua, shfmt, shellcheck
 - **Session Management**: persistence.nvim
