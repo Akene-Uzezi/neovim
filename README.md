@@ -32,6 +32,7 @@ A customized [LazyVim](https://github.com/LazyVim/LazyVim) (v8) configuration fo
 | Visual | `<C-_>`   | Toggle line comment                 |
 | Normal/Visual | `<A-Down>` | Move selection/line down       |
 | Normal/Visual | `<A-Up>`   | Move selection/line up         |
+| Normal | `<leader>rr` | Insert `if err != nil { return err }` boilerplate |
 
 ## Project Structure
 
