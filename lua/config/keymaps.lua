@@ -8,12 +8,5 @@ vim.keymap.set("n", "<A-Up>", ":m .-2<CR>==", { desc = "Move line up" })
 vim.keymap.set("v", "<A-Down>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
 vim.keymap.set("v", "<A-Up>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
--- Toggle comment with Ctrl + / (Normal Mode)
-vim.keymap.set("n", "<C-,>", "gcc", { remap = true, desc = "Toggle comment" })
-vim.keymap.set("n", "<C-_>", "gcc", { remap = true, desc = "Toggle comment" })
-
--- Toggle comment with Ctrl + / (Visual Mode)
-vim.keymap.set("v", "<C-,>", "gc", { remap = true, desc = "Toggle comment" })
-vim.keymap.set("v", "<C-_>", "gc", { remap = true, desc = "Toggle comment" })
 -- If err != nil keymap
 vim.keymap.set("n", "<leader>rr", "oif err != nil {\n\treturn err\n}<Esc>")
