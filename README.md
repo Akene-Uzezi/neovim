@@ -4,20 +4,21 @@ A customized [LazyVim](https://github.com/LazyVim/LazyVim) (v8) configuration fo
 
 ## Features
 
-- **Plugin Management**: Lazy.nvim with pinned versions via `lazy-lock.json`
+- **Plugin Management**: Lazy.nvim with pinned versions (`lazy-lock.json`, gitignored)
 - **UI**: Snacks dashboard with custom ASCII header, NeoTree, Lualine, Which-Key, Rose Pine theme with black background
 - **Fuzzy Finder**: Telescope with hidden files and `.gitignore` bypass
 - **Completion**: blink.cmp
-- **Navigation**: flash.nvim, flash-treesitter
+- **Navigation**: flash.nvim
 - **Git**: gitsigns.nvim (inline diff, git blame), grug-far.nvim (find & replace)
 - **Language Extras** (via LazyVim Extras):
-  - C/C++ (clangd), Git, Go, Python, Rust, SQL, TypeScript/JavaScript
+  - C/C++ (clangd), Docker, Git, Go, Kotlin, Markdown, Python, Rust, SQL, TypeScript/JavaScript, YAML
 - **LSP**: mason.nvim + mason-lspconfig, rustaceanvim, venv-selector, protols (Protobuf)
 - **Linting & Formatting**: nvim-lint, Conform.nvim, StyLua, shfmt, shellcheck
 - **Session Management**: persistence.nvim
 - **Diagnostics**: trouble.nvim, todo-comments.nvim
 - **Editor**: nvim-treesitter, mini.ai, mini.pairs, noice.nvim
 - **Database**: vim-dadbod, vim-dadbod-ui, vim-dadbod-completion
+- **Markdown**: render-markdown.nvim (inline rendering), markdown-preview.nvim (live preview)
 - **Misc**: ts-comments.nvim, crates.nvim, lazydev.nvim, mini.icons, friendly-snippets
 
 ## Keybindings
