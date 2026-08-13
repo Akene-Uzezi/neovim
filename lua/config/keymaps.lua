@@ -9,4 +9,4 @@ vim.keymap.set("v", "<A-Down>", ":m '>+1<CR>gv=gv", { desc = "Move selection dow
 vim.keymap.set("v", "<A-Up>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
 -- If err != nil keymap
-vim.keymap.set("n", "<leader>rr", "oif err != nil {\n\treturn err\n}<Esc>")
+vim.keymap.set("n", "<leader>rr", "oif err != nil {\nreturn err\n}<Esc>")
