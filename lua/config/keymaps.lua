@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("i", "jk", "<Esc>", { desc = "Exit insert mode" })
+vim.keymap.set("i", "JK", "<Esc>", { desc = "Exit insert mode with caps lock on" })
 -- Move lines up/down in Normal mode
 vim.keymap.set("n", "<A-Down>", ":m .+1<CR>==", { desc = "Move line down" })
 vim.keymap.set("n", "<A-Up>", ":m .-2<CR>==", { desc = "Move line up" })
