@@ -7,8 +7,8 @@ A customized [LazyVim](https://github.com/LazyVim/LazyVim) (v8) configuration fo
 - **Plugin Management**: Lazy.nvim with pinned versions (`lazy-lock.json`, gitignored)
 - **UI**: Snacks dashboard with custom ASCII header, NeoTree, Lualine, Which-Key, Rose Pine theme with black background
 - **Fuzzy Finder**: Telescope with hidden files and `.gitignore` bypass
-- **Completion**: blink.cmp
-- **Navigation**: flash.nvim
+- **Completion**: blink.cmp (via LazyVim defaults)
+- **Navigation**: flash.nvim (via LazyVim defaults)
 - **Git**: gitsigns.nvim (inline diff, git blame), grug-far.nvim (find & replace)
 - **Language Extras** (via LazyVim Extras):
   - C/C++ (clangd), Docker, Git, Go, Kotlin, Markdown, Python, Rust, SQL, TypeScript/JavaScript, YAML
@@ -20,24 +20,24 @@ A customized [LazyVim](https://github.com/LazyVim/LazyVim) (v8) configuration fo
 - **Database**: vim-dadbod, vim-dadbod-ui, vim-dadbod-completion
 - **Markdown**: render-markdown.nvim (inline rendering), markdown-preview.nvim (live preview)
 - **Misc**: ts-comments.nvim, crates.nvim, lazydev.nvim, mini.icons, friendly-snippets
+- **Local Plugin**: vim-with-me (collaborative editing, loaded from `lua/vim-with-me`)
 
 ## Keybindings
 
 | Mode | Key        | Action                              |
 |------|------------|-------------------------------------|
-| Insert | `jk`     | Exit insert mode                    |
-| Normal | `<C-,>`   | Toggle line comment                 |
-| Normal | `<C-_>`   | Toggle line comment                 |
-| Visual | `<C-,>`   | Toggle line comment                 |
-| Visual | `<C-_>`   | Toggle line comment                 |
+| Insert | `jk` / `JK` | Exit insert mode                  |
+| Normal | `<C-,>` / `<C-_>` | Toggle line comment             |
+| Visual | `<C-,>` / `<C-_>` | Toggle line comment             |
 | Normal/Visual | `<A-Down>` | Move selection/line down       |
 | Normal/Visual | `<A-Up>`   | Move selection/line up         |
 | Normal | `<leader>rr` | Insert `if err != nil { return err }` boilerplate |
+| Normal | `<leader>uu` | Toggle Undotree                   |
 
 ## Project Structure
 
 ```
-├── init.lua                  # Entry point
+├── init.lua                  # Entry point (bootstrap + global keymaps)
 ├── lazy-lock.json            # Pinned plugin versions
 ├── lazyvim.json              # Language extras config
 ├── stylua.toml               # StyLua config
@@ -46,15 +46,22 @@ A customized [LazyVim](https://github.com/LazyVim/LazyVim) (v8) configuration fo
 │   ├── config/
 │   │   ├── autocmds.lua      # Custom autocmds
 │   │   ├── keymaps.lua       # Custom key mappings
-│   │   ├── lazy.lua          # Lazy.nvim bootstrap
-│   │   └── options.lua       # Neovim options
-│   └── plugins/
-│       ├── black.lua         # Rose Pine colorscheme + black background
-│       ├── dashboard.lua     # Snacks.nvim dashboard
-│       ├── neotree.lua       # NeoTree (show dotfiles/gitignored)
-│       ├── protobuf.lua      # Protobuf LSP, treesitter, formatting (buf)
-│       ├── telescope.lua     # Telescope (show hidden, no .gitignore)
-│       └── example.lua       # Example (disabled by default)
+│   │   ├── lazy.lua          # Lazy.nvim bootstrap & LazyVim extras
+│   │   └── options.lua       # Neovim options + Undotree keymap
+│   ├── plugins/
+│   │   ├── black.lua         # Rose Pine colorscheme + black background
+│   │   ├── dashboard.lua     # Snacks.nvim dashboard with ASCII header
+│   │   ├── neotree.lua       # NeoTree (show dotfiles/gitignored)
+│   │   ├── protobuf.lua      # Protobuf LSP, treesitter, formatting (buf)
+│   │   ├── telescope.lua     # Telescope (show hidden, no .gitignore)
+│   │   ├── vim-with-me.lua   # Local plugin loader (empty spec)
+│   │   └── example.lua       # Example configs (disabled by default)
+│   └── vim-with-me/          # Local collaborative editing plugin
+│       ├── init.lua          # Main entry (START/CLOSE functions)
+│       ├── app/              # App logic (token handling)
+│       ├── tcp/              # TCP connection handling
+│       ├── window/           # Window management (color, cache)
+│       └── utils.lua         # Utilities
 ```
 
 ## Getting Started
